@@ -48,21 +48,33 @@ const App = () => {
         p: 2,
       }}
     >
-      <Container maxWidth="100%">
+      <Container
+        maxWidth="sm"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <Paper
-          elevation={4}
+          elevation={6}
           sx={{
-            p: { xs: 2, sm: 3 },
-            borderRadius: 3,
+            p: { xs: 3, sm: 5 },
+            borderRadius: 4,
             width: "100%",
-            boxShadow: "0px 4px 20px rgba(0,0,0,0.1)",
+            maxWidth: 500,
+            boxShadow: "0px 6px 25px rgba(0,0,0,0.15)",
           }}
         >
           <Typography
-            variant="h5"
+            variant="h4"
             align="center"
             gutterBottom
-            sx={{ fontWeight: "bold" }}
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "1.5rem", sm: "2rem" },
+              mb: 3,
+            }}
           >
             Daily Expense Tracker
           </Typography>
