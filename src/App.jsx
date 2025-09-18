@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Container, Typography, Paper, Box } from "@mui/material";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
-import TotalCard from "./components/TotalCard";
 import MonthlySummary from "./components/MonthlySummary";
 import { supabase } from "./supabaseClient";
 
@@ -69,7 +68,6 @@ const App = () => {
           </Typography>
 
           <ExpenseForm onAddExpense={addExpense} />
-          <TotalCard total={total} />
           <MonthlySummary expenses={expenses} />
           <ExpenseList expenses={expenses} onDelete={deleteExpense} />
         </Paper>
